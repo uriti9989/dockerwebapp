@@ -3,7 +3,7 @@ version: "3"
 services:
  devopsdb:
    deploy: 
-      replicas: "6"
+      replicas: 6
    image: uriti9989/dockerautomation:dbimage
    ports:
      - "3306:3306"
@@ -11,7 +11,7 @@ services:
  application:
    image: uriti9989/dockerautomation:appimage
    deploy: 
-      replicas: "6"
+      replicas: 6
    ports:
      - "1234:8080"
    depends_on:
